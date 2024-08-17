@@ -6,7 +6,8 @@
 
 \begin{question}
 A normal seated adult breathes in and exhales about $0.8$ L of air every $4$ seconds.  An experiment produced the graph below.  The volume $V$ of air
-in the lungs $t$ seconds after exhaling can be approximated by a cosine function of the form $V= A \cos Bt + D, $  $0 \le t \le 8.$   Find the equation. 
+in the lungs $t$ seconds after exhaling can be approximated by a cosine function 
+of the form $V= A \cos Bt + D, $  $0 \le t \le 8.$    
 %\textbf{Explain your reasoning and show your work.}  %Answer:  -0.35*cos(deg(pi*x/2)) + 0.45
 \begin{image}
 \begin{tikzpicture}
@@ -20,19 +21,23 @@ in the lungs $t$ seconds after exhaling can be approximated by a cosine function
   \draw[dashed] (0,2.83)--(6.16,2.83);
 \end{tikzpicture}
 \end{image}
+Find a formula for $V.$
+\begin{prompt}
 \[
  V = \answer{-0.35\cos \left( \frac{\pi x}{2} \right) + 0.45} 
 \]
+\end{prompt}
 \end{question} 
 
 
 
 \begin{question}
-The circle below has been divided into 10 equal parts.  What fraction of the circle is shaded?
+What fraction of the circle is shaded?
 
 \vspace{0.2in}
 %\begin{image}  %Makes circle huge!!  scale=0.1 does not help
-\hspace{0.8in} \begin{tikzpicture}
+\begin{center}
+\begin{tikzpicture}
 \draw[thick] (0,0) circle [radius=1.3cm];
 \foreach \i in {36,72,...,360}
   \draw[semithick] (0,0)--(\i:1.3cm);    %The colon signifies that polar coordinates are being used. (60:.75cm) means the point that is at an angle of 60° and a distance of 0.75cm from the origin. Length of radial lines - should match radius above.
@@ -45,7 +50,7 @@ The circle below has been divided into 10 equal parts.  What fraction of the cir
 % \draw[fill=glaucous] (0,0) -- (360:1.5) arc(360:324:1.5);
 
 \end{tikzpicture}
-%\end{image}
+\end{center}
 
 \begin{multipleChoice}
 \choice[correct]{$\displaystyle \frac{3}{10}$}
