@@ -1,0 +1,90 @@
+\documentclass[11pt]{ximera}  %Use handout to suppress answers
+\input{preamble.tex}
+
+\title{Test Document - Take 110} \author{Kelly}
+
+\begin{document}
+
+\begin{abstract} Seeing if this thing works. \end{abstract} 
+\maketitle
+
+
+\begin{question} 
+  $\lim\limits_{x \rightarrow 3} \displaystyle \frac{x + 2}{5} = \answer{1}$
+\end{question}
+
+\begin{question}
+A normal seated adult breathes in and exhales about $0.8$ L of air every $4$ seconds.  An experiment produced the graph below.  The volume $V$ of air
+in the lungs $t$ seconds after exhaling can be approximated by a cosine function 
+of the form $V= A \cos Bt + D,$   $0 \le t \le 8.$  Find the equation.    
+%\textbf{Explain your reasoning and show your work.}  %Answer:  -0.35*cos(deg(pi*x/2)) + 0.45
+
+
+\begin{center}
+\begin{tikzpicture}
+%\draw[help lines] (0,0) grid (8,8);
+  \begin{axis} [axis lines=center, xmin = 0, xmax = 8.5, xtick={0, 1, 2, 3, 4, 5, 6, 7, 8},
+    ymin = 0, ymax = 0.9, ytick={0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8}, xlabel={$t$}, ylabel={$V$}, every axis y label/.style={at=(current axis.above origin),anchor=south}, every axis x label/.style={at=(current axis.right of origin),anchor=west} ]
+    \addplot [domain=0:8, samples=100, very thick] {-0.35*cos(deg(pi*x/2)) + 0.45};   %Can use smooth in place of samples = 100, but it makes graph chopy
+  \end{axis}
+  \node at (3.5,-1) {Time (s)};
+  \node[rotate = 90] at (-1.3,3) {Volume (L)};
+  \draw[dashed] (0,2.83)--(6.16,2.83);
+\end{tikzpicture}
+\end{center}
+
+\begin{prompt}
+\[
+ V = \answer{-0.35\cos \left( \frac{\pi x}{2} \right) + 0.45} 
+\]
+\end{prompt}
+\end{question} 
+
+
+
+\begin{question}
+What fraction of the circle is shaded?
+
+
+%\begin{image}  %Makes circle huge!!  scale=0.1 does not help
+\begin{center}
+\begin{tikzpicture}
+\draw[thick] (0,0) circle [radius=1.3cm];
+\foreach \i in {36,72,...,360}
+  \draw[semithick] (0,0)--(\i:1.3cm);    %The colon signifies that polar coordinates are being used. (60:.75cm) means the point that is at an angle of 60° and a distance of 0.75cm from the origin. Length of radial lines - should match radius above.
+
+
+ \draw[thick, fill=glaucous!60] (0,0) --  (36:1.3) arc(36:0:1.3); %To Draw Arc: \draw (x,y) arc (start:stop:radius);
+
+ \draw[thick, fill=glaucous!60] (0,0) --  (72:1.3) arc(72:36:1.3); %Colon indicates polar coordintes (angle:length)
+ \draw[thick, fill=glaucous!60] (0,0) --  (108:1.3) arc(108:72:1.3);
+% \draw[fill=glaucous] (0,0) -- (360:1.5) arc(360:324:1.5);
+
+\end{tikzpicture}
+\end{center}
+
+\begin{multipleChoice}
+\choice[correct]{$\displaystyle \frac{3}{10}$}
+\choice{$\displaystyle \frac{1}{10}$}
+\choice{$\displaystyle \frac{7}{10}$}
+\end{multipleChoice}
+
+\end{question}
+
+
+
+
+\bigskip
+%\begin{image}  Would not compile
+\begin{center}
+    \textbf{Maple Graph}\par\medskip
+    \includegraphics[scale=0.3]{reimannlo.eps}
+    %\caption{Lower Sum}
+\end{center}
+%\end{image}
+
+
+
+
+
+\end{document} 
